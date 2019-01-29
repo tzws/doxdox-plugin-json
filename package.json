@@ -1,0 +1,37 @@
+{
+  "_requiredBy": [
+    "/doxdox"
+  ],
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Json plugin for doxdox.",
+  "devDependencies": {
+    "eslint": "^4.2.0"
+  },
+  "engines": {
+    "node": ">=4.0"
+  },
+  "homepage": "https://github.com/neogeek/doxdox-plugin-markdown",
+  "keywords": [
+    "doxdox",
+    "plugin",
+    "json"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "doxdox-plugin-json",
+  "peerDependencies": {
+    "doxdox": "~2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neogeek/doxdox-plugin-markdown.git"
+  },
+  "scripts": {
+    "docs": "doxdox index.js --layout index.js --output somejson.js",
+    "lint": "eslint .",
+    "test": "npm run lint && npm run test:docs",
+    "test:docs": "doxdox index.js --layout index.js | diff somejson.js -"
+  },
+  "version": "0.0.1"
+}
