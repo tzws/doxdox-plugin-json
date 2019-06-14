@@ -13,7 +13,7 @@ const plugin = data => new Promise((resolve, reject) => {
   data.files.filter(item => item.methods.length > 0).map(everyEach => 
     {
       everyEach.methods.map(m1 => {
-        result[ /^__/.exec(m1.name) ? m1.name.substring(2) : m1.name ] = m1.tags.property.map(elem => elem.name).join('');
+        (m1.tags.property && m1.tags.property != "") && ( result[ /^__/.exec(m1.name) ? m1.name.substring(2) : m1.name ] = m1.tags.property.map(elem => elem.name).join(''));
       });
     }
   );
