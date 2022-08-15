@@ -21,7 +21,7 @@
   "main": "index.js",
   "name": "doxdox-plugin-json",
   "peerDependencies": {
-    "doxdox": "~2.0.3"
+    "doxdox": "^3.0.0"
   },
   "repository": {
     "type": "git",
